@@ -1,32 +1,20 @@
-{
-  "version": 1,
-  "defaultEnvironment": "production",
-  "project": {
-    "name": "aklima-foundation",
-    "type": "static",
-    "framework": "next",
-    "language": "ts"
-  },
-  "environments": {
-    "production": {
-      "provider": "azure",
-      "config": {
-        "resourceGroup": "aklima-foundation-rg",
-        "staticWebApp": "aklima-foundation-swa",
-        "location": "eastus2"
-      }
-    }
-  },
-  "services": {
-    "web": {
-      "project": "./",
-      "dist": "out",
-      "host": "staticwebapp",
-      "language": "ts",
-      "hooks": {
-        "prebuild": "npm install",
-        "build": "npm run build"
-      }
-    }
-  }
-}
+name: aklima-foundation
+metadata:
+  template: azd-init@1.18.2
+workflows:
+  up:
+    - azd: provision
+    - azd: deploy
+services:
+  web:
+    project: ./
+    dist: out
+    host: staticwebapp
+    language: ts
+    hooks:
+      prebuild:
+        shell: sh
+        run: npm install
+      build:
+        shell: sh
+        run: npm run build
