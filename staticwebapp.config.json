@@ -1,0 +1,31 @@
+{
+  "routes": [
+    {
+      "route": "/admin/*",
+      "serve": "/admin/index.html"
+    },
+    {
+      "route": "/*",
+      "serve": "/index.html",
+      "statusCode": 200
+    }
+  ],
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/admin/*", "*.{css,scss,js,png,gif,ico,jpg,svg}"]
+  },
+  "mimeTypes": {
+    ".json": "application/json"
+  },
+  "defaultHeaders": {
+    "Cache-Control": "public, max-age=31536000, immutable"
+  },
+  "headers": {
+    "/**/*.html": {
+      "Cache-Control": "public, max-age=0, must-revalidate"
+    },
+    "/admin/**": {
+      "Cache-Control": "public, max-age=0, must-revalidate"
+    }
+  }
+}

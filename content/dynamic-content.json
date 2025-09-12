@@ -1,0 +1,89 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "title": "Aklima Foundation Launches New Educational Initiative",
+      "excerpt": "A comprehensive program to provide digital literacy training to 5,000 students across rural communities.",
+      "content": "The Aklima Progressive Foundation is proud to announce the launch of our newest educational initiative, aimed at bridging the digital divide in rural communities. This comprehensive program will provide digital literacy training to 5,000 students over the next two years.",
+      "date": "2025-09-10",
+      "author": "Foundation Team",
+      "category": "Education",
+      "featured": true,
+      "image": "/images/news/digital-literacy.jpg"
+    },
+    {
+      "id": "2",
+      "title": "Healthcare Mobile Clinics Reach Remote Villages",
+      "excerpt": "Our mobile healthcare units have successfully provided medical services to over 3,000 people in remote areas.",
+      "content": "Over the past quarter, our mobile healthcare clinics have made significant strides in reaching underserved communities. These state-of-the-art mobile units have provided essential medical services to over 3,000 people in remote areas that previously had limited access to healthcare.",
+      "date": "2025-09-05",
+      "author": "Dr. Sarah Johnson",
+      "category": "Healthcare",
+      "featured": false,
+      "image": "/images/news/mobile-clinic.jpg"
+    },
+    {
+      "id": "3",
+      "title": "Sustainable Agriculture Program Shows Promising Results",
+      "excerpt": "Local farmers report 40% increase in crop yields using sustainable farming techniques taught by our program.",
+      "content": "Our sustainable agriculture program has shown remarkable results in its first year of implementation. Local farmers participating in the program report an average 40% increase in crop yields while reducing their environmental impact through sustainable farming techniques.",
+      "date": "2025-08-28",
+      "author": "Agricultural Team",
+      "category": "Environment",
+      "featured": false,
+      "image": "/images/news/sustainable-agriculture.jpg"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Maria Santos",
+      "role": "Teacher, Rural School",
+      "content": "The education program has transformed our school. Our students now have access to technology and resources we never thought possible.",
+      "image": "/images/testimonials/maria-santos.jpg",
+      "location": "Guatemala"
+    },
+    {
+      "id": "2",
+      "name": "Dr. James Okoye",
+      "role": "Community Health Worker",
+      "content": "The mobile clinics have been a game-changer for our community. We can now provide quality healthcare to people who previously had to travel hours for medical attention.",
+      "image": "/images/testimonials/james-okoye.jpg",
+      "location": "Nigeria"
+    },
+    {
+      "id": "3",
+      "name": "Priya Sharma",
+      "role": "Small Business Owner",
+      "content": "The microfinance program helped me start my textile business. Now I employ 12 people from my village and we're all building better lives.",
+      "image": "/images/testimonials/priya-sharma.jpg",
+      "location": "India"
+    }
+  ],
+  "team": [
+    {
+      "id": "1",
+      "name": "Alexandra Chen",
+      "role": "Executive Director",
+      "bio": "Alexandra brings over 15 years of experience in international development and has led programs in over 30 countries.",
+      "image": "/images/team/alexandra-chen.jpg",
+      "linkedin": "https://linkedin.com/in/alexandrachen"
+    },
+    {
+      "id": "2",
+      "name": "Dr. Michael Rodriguez",
+      "role": "Program Director",
+      "bio": "Dr. Rodriguez is a specialist in sustainable development with a PhD in Social Policy from Harvard University.",
+      "image": "/images/team/michael-rodriguez.jpg",
+      "linkedin": "https://linkedin.com/in/michaelrodriguez"
+    },
+    {
+      "id": "3",
+      "name": "Sarah Williams",
+      "role": "Operations Manager",
+      "bio": "Sarah oversees our global operations and has a background in international logistics and project management.",
+      "image": "/images/team/sarah-williams.jpg",
+      "linkedin": "https://linkedin.com/in/sarahwilliams"
+    }
+  ]
+}

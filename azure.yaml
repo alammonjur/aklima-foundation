@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "defaultEnvironment": "production",
+  "project": {
+    "name": "aklima-foundation",
+    "type": "static",
+    "framework": "next",
+    "language": "ts"
+  },
+  "environments": {
+    "production": {
+      "provider": "azure",
+      "config": {
+        "resourceGroup": "aklima-foundation-rg",
+        "staticWebApp": "aklima-foundation-swa",
+        "location": "eastus2"
+      }
+    }
+  },
+  "services": {
+    "web": {
+      "project": "./",
+      "dist": "out",
+      "host": "staticwebapp",
+      "language": "ts",
+      "hooks": {
+        "prebuild": "npm install",
+        "build": "npm run build"
+      }
+    }
+  }
+}

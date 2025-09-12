@@ -1,0 +1,170 @@
+{
+  "foundation": {
+    "name": "Aklima Progressive Foundation",
+    "tagline": "Advancing opportunity with dignity",
+    "description": "We partner with communities to expand access to education, healthcare, assistive mobility, and resilient infrastructure—starting in Magrahat, West Bengal.",
+    "mission": "Our mission is \"Education for All.\" We work to remove practical barriers that keep families from thriving—school fees, lack of assistive devices, unsafe roads, and preventable illness. We fund local solutions, measure outcomes, and report transparently so every rupee creates meaningful change.",
+    "vision": "A world where every individual has the opportunity to thrive in a just, sustainable, and equitable society.",
+    "established": "2025",
+    "founders": "Co-founded by Tazneem Alam and Dr. Monjur Alam",
+    "location": "Magrahat, South 24 Parganas, West Bengal, India",
+    "workingAreas": "Initial focus in Magrahat (South 24 Parganas), West Bengal, with plans to expand through partnerships with local panchayats, schools, and health workers.",
+    "contact": {
+      "email": "hello@aklimafoundation.org",
+      "donateEmail": "donate@aklimafoundation.org",
+      "phone": "+91-XXXX-XXXXXX",
+      "address": "Magrahat, South 24 Parganas, West Bengal, India"
+    },
+    "social": {
+      "twitter": "https://twitter.com/aklimafoundation",
+      "facebook": "https://facebook.com/aklimafoundation",
+      "linkedin": "https://linkedin.com/company/aklima-progressive-foundation",
+      "instagram": "https://instagram.com/aklimafoundation"
+    }
+  },
+  "hero": {
+    "badge": "🌍 Started in Bengal • Community‑led",
+    "title": "Aklima Progressive Foundation",
+    "subtitle": "Advancing opportunity with dignity",
+    "description": "We partner with communities to expand access to education, healthcare, assistive mobility, and resilient infrastructure—starting in Magrahat, West Bengal.",
+    "founders": "Co-founded by Tazneem Alam and Dr. Monjur Alam",
+    "primaryButton": {
+      "text": "Donate",
+      "link": "#donate"
+    },
+    "secondaryButton": {
+      "text": "Learn More",
+      "link": "#mission"
+    },
+    "heroCard": {
+      "image": "/images/indp.jpg",
+      "title": "Education for All",
+      "subtitle": "Independence Day Initiative",
+      "description": "Assistive mobility for 8–10 persons with disabilities",
+      "stats": [
+        "350 school bags distributed",
+        "6 Tri-cycles for physically challenged distributed"
+      ]
+    }
+  },
+  "focusAreas": [
+    {
+      "id": "education",
+      "title": "Education Access",
+      "description": "Scholarships, exam fees, uniforms, and mentoring for students from low‑income families.",
+      "icon": "🎓",
+      "category": "Education"
+    },
+    {
+      "id": "disability",
+      "title": "Disability Support",
+      "description": "Wheelchairs, crutches, tricycles/bicycles, and assistive aids with after‑care.",
+      "icon": "♿",
+      "category": "Disability"
+    },
+    {
+      "id": "infrastructure",
+      "title": "Safe Infrastructure",
+      "description": "Community‑led road repair, lighting, and safe‑routes‑to‑school projects.",
+      "icon": "🚧",
+      "category": "Infrastructure"
+    },
+    {
+      "id": "healthcare",
+      "title": "Primary Healthcare",
+      "description": "Screenings, health camps, and referral support for chronic conditions.",
+      "icon": "🩺",
+      "category": "Healthcare"
+    },
+    {
+      "id": "women",
+      "title": "Women & Livelihoods",
+      "description": "Skills, micro‑grants, and collectives that build resilient household income.",
+      "icon": "👩‍👩‍👧",
+      "category": "Economic Development"
+    },
+    {
+      "id": "climate",
+      "title": "Climate Resilience",
+      "description": "Flood‑safe infrastructure and awareness in vulnerable blocks.",
+      "icon": "🌱",
+      "category": "Environment"
+    }
+  ],
+  "programs": [
+    {
+      "id": "magrahat-scholars",
+      "title": "Magrahat Scholars",
+      "description": "Sponsor students through board exams with fees, books, and mentoring.",
+      "category": "Education",
+      "buttonText": "Sponsor a student →",
+      "link": "#donate"
+    },
+    {
+      "id": "assistive-mobility",
+      "title": "Assistive Mobility",
+      "description": "Provide mobility devices across blocks with local follow‑up support.",
+      "category": "Disability",
+      "buttonText": "Fund a device →",
+      "link": "#donate"
+    },
+    {
+      "id": "safe-roads",
+      "title": "Safe Roads",
+      "description": "Repair high‑risk stretches using community materials & labour.",
+      "category": "Infrastructure",
+      "buttonText": "Back a stretch →",
+      "link": "#donate"
+    },
+    {
+      "id": "health-camps",
+      "title": "Community Health Camps",
+      "description": "Quarterly screenings for BP, diabetes, anaemia with referral pathways.",
+      "category": "Health",
+      "buttonText": "Enable a camp →",
+      "link": "#donate"
+    }
+  ],
+  "impact": [
+    {
+      "number": "350",
+      "label": "School bags distributed"
+    },
+    {
+      "number": "6",
+      "label": "Tri-cycles for physically challenged distributed"
+    },
+    {
+      "number": "2–3 km",
+      "label": "Priority roads to repair"
+    },
+    {
+      "number": "10",
+      "label": "Students planned for 2026"
+    }
+  ],
+  "governingBody": [
+    "Inspector Abdus Samad Ansari",
+    "Tazneem Alam",
+    "Dr. Monjur Alam",
+    "Abhijnan Chakraborty"
+  ],
+  "donation": {
+    "title": "Support Our Mission",
+    "description": "Every contribution makes a direct impact on our community.",
+    "howToDonate": {
+      "title": "How to Donate",
+      "description": "For now, donations are processed offline while registration completes. Please contact us for bank details and receipt information.",
+      "buttonText": "Contact for Donation",
+      "email": "donate@aklimafoundation.org"
+    },
+    "donationImpact": {
+      "title": "What Your Gift Can Do",
+      "amounts": [
+        "₹3,000: Exam fees & books for one student",
+        "₹5,000–₹6,000: Assistive device for one person with disability",
+        "₹10,000: Materials for 50m of priority road repair"
+      ]
+    }
+  }
+}

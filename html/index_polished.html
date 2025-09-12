@@ -1,0 +1,675 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aklima Progressive Foundation — Advancing Opportunity with Dignity</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --emerald:#059669;
+      --emerald-700:#047857;
+      --emerald-light:#d1fae5;
+      --emerald-50:#ecfdf5;
+      --bg:#f8fafc;
+      --text:#0f172a;
+      --muted:#475569;
+      --card:#ffffff;
+      --border:#e2e8f0;
+      --shadow:0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg:0 10px 15px -3px rgba(0,0,0,0.1);
+    }
+    
+    *{box-sizing:border-box;margin:0;padding:0;}
+    
+    body{
+      font-family:'Inter',system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:linear-gradient(135deg,#ffffff 0%,var(--emerald-50) 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+    
+    /* Typography */
+    h1{
+      font-size:5rem;
+      font-weight:800;
+      line-height:1.1;
+      margin:1.5rem 0;
+      background:linear-gradient(135deg,var(--text) 0%,var(--emerald-700) 100%);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      background-clip:text;
+    }
+    
+    .tagline{
+      font-size:2rem;
+      font-weight:600;
+      color:var(--muted);
+      margin:1rem 0;
+      line-height:1.3;
+    }
+    
+    h2{font-size:2.25rem;font-weight:700;margin:0 0 1.5rem;color:var(--text);}
+    h3{font-size:1.5rem;font-weight:600;margin:0 0 0.75rem;color:var(--text);}
+    
+    p.lead{
+      font-size:1.25rem;
+      color:var(--muted);
+      max-width:640px;
+      line-height:1.7;
+      margin:1rem 0;
+    }
+    
+    /* Layout */
+    .container{max-width:1200px;margin:0 auto;padding:0 2rem;}
+    
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:saturate(180%) blur(20px);
+      border-bottom:1px solid var(--border);
+      z-index:50;
+      box-shadow:var(--shadow);
+    }
+    
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      height:80px;
+    }
+    
+    .brand{display:flex;align-items:center;gap:1rem;}
+    
+    .logo{
+      display:grid;
+      place-items:center;
+      width:52px;
+      height:52px;
+      background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-700) 100%);
+      color:#fff;
+      border-radius:16px;
+      font-weight:800;
+      font-size:1.5rem;
+      box-shadow:0 4px 12px rgba(5,150,105,0.3);
+    }
+    
+    .brand-text{
+      font-weight:900;
+      font-size:1.5rem;
+      line-height:1.2;
+      color:var(--text);
+    }
+    
+    .brand-sub{
+      font-size:0.75rem;
+      letter-spacing:0.1em;
+      color:var(--muted);
+      text-transform:uppercase;
+      font-weight:600;
+    }
+    
+    .navlinks{display:flex;gap:2rem;align-items:center;}
+    
+    .navlinks a{
+      color:var(--muted);
+      font-weight:500;
+      text-decoration:none;
+      transition:all 0.3s ease;
+      padding:0.5rem 1rem;
+      border-radius:8px;
+      font-size:1rem;
+    }
+    
+    .navlinks a:hover{
+      color:var(--emerald-700);
+      background:var(--emerald-light);
+    }
+    
+    /* Buttons */
+    .btn{
+      border:1px solid var(--border);
+      padding:0.75rem 1.5rem;
+      border-radius:12px;
+      background:#fff;
+      font-weight:600;
+      cursor:pointer;
+      transition:all 0.3s ease;
+      font-size:1rem;
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+    }
+    
+    .btn.primary{
+      background:linear-gradient(135deg,var(--emerald) 0%,var(--emerald-700) 100%);
+      color:#fff;
+      border:none;
+      box-shadow:0 4px 12px rgba(5,150,105,0.3);
+    }
+    
+    .btn.primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 8px 25px rgba(5,150,105,0.4);
+    }
+    
+    .btn:hover{
+      background:var(--emerald-50);
+      transform:translateY(-1px);
+      box-shadow:var(--shadow);
+    }
+    
+    /* Hero Section */
+    .hero{
+      padding:5rem 0;
+      background:linear-gradient(135deg,#ffffff 0%,var(--emerald-50) 50%,#f0fdf4 100%);
+    }
+    
+    .pill{
+      display:inline-flex;
+      gap:8px;
+      align-items:center;
+      border:1px solid var(--emerald-light);
+      padding:0.5rem 1rem;
+      border-radius:50px;
+      color:var(--emerald-700);
+      background:var(--emerald-light);
+      font-size:0.875rem;
+      font-weight:600;
+      box-shadow:0 2px 8px rgba(5,150,105,0.1);
+      margin-bottom:1.5rem;
+    }
+    
+    /* Cards */
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:2rem;
+      box-shadow:var(--shadow);
+      transition:all 0.3s ease;
+    }
+    
+    .card:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+    }
+    
+    .hero-card{
+      background:linear-gradient(135deg,var(--card) 0%,var(--emerald-50) 100%);
+      border-radius:24px;
+      padding:2rem;
+      text-align:center;
+    }
+    
+    .hero-image{
+      width:100%;
+      max-height:280px;
+      object-fit:cover;
+      border-radius:16px;
+      box-shadow:var(--shadow-lg);
+      transition:all 0.3s ease;
+      margin-bottom:1.5rem;
+    }
+    
+    .hero-image:hover{
+      transform:scale(1.02);
+      box-shadow:0 20px 40px rgba(0,0,0,0.15);
+    }
+    
+    .caption{
+      font-size:1.25rem;
+      font-weight:700;
+      color:var(--emerald-700);
+      margin-bottom:1rem;
+    }
+    
+    /* Grid layouts */
+    .row{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:4rem;
+      align-items:center;
+    }
+    
+    @media (min-width:900px){
+      .row{grid-template-columns:1.2fr 1fr;}
+    }
+    
+    .grid-3{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:2rem;
+    }
+    
+    @media (min-width:768px){
+      .grid-3{grid-template-columns:repeat(2,1fr);}
+    }
+    
+    @media (min-width:1024px){
+      .grid-3{grid-template-columns:repeat(3,1fr);}
+    }
+    
+    .grid-4{
+      display:grid;
+      grid-template-columns:1fr;
+      gap:2rem;
+    }
+    
+    @media (min-width:768px){
+      .grid-4{grid-template-columns:repeat(2,1fr);}
+    }
+    
+    @media (min-width:1024px){
+      .grid-4{grid-template-columns:repeat(4,1fr);}
+    }
+    
+    /* Sections */
+    section{padding:5rem 0;}
+    
+    .stat{
+      display:grid;
+      place-items:center;
+      border:1px solid var(--border);
+      background:linear-gradient(135deg,#fff 0%,var(--emerald-50) 100%);
+      border-radius:20px;
+      padding:2.5rem 1.5rem;
+      text-align:center;
+      transition:all 0.3s ease;
+    }
+    
+    .stat:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow-lg);
+    }
+    
+    .stat .val{
+      font-size:3rem;
+      font-weight:800;
+      color:var(--emerald-700);
+      margin-bottom:0.5rem;
+      line-height:1;
+    }
+    
+    .stat .desc{
+      color:var(--muted);
+      font-weight:500;
+    }
+    
+    /* Focus cards */
+    .focus-card{
+      transition:all 0.3s ease;
+      height:100%;
+    }
+    
+    .focus-card:hover{
+      transform:translateY(-4px);
+    }
+    
+    .focus-card .icon{
+      width:48px;
+      height:48px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--emerald-light) 0%,var(--emerald-50) 100%);
+      color:var(--emerald-700);
+      border-radius:12px;
+      margin-bottom:1.5rem;
+      font-size:1.5rem;
+    }
+    
+    /* Programs */
+    .program{
+      transition:all 0.3s ease;
+      height:100%;
+    }
+    
+    .program:hover{
+      transform:translateY(-4px);
+    }
+    
+    .program .banner{
+      height:140px;
+      border-radius:16px;
+      background:linear-gradient(135deg,var(--emerald-light) 0%,#fff 50%,var(--emerald-50) 100%);
+      border:1px solid var(--border);
+      margin-bottom:1.5rem;
+    }
+    
+    /* Governing Body */
+    .governing-body{
+      background:linear-gradient(135deg,var(--emerald-50) 0%,#ffffff 100%);
+    }
+    
+    .member-list{
+      list-style:none;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:1.5rem;
+    }
+    
+    .member-list li{
+      background:var(--card);
+      padding:1.5rem;
+      border-radius:16px;
+      border:1px solid var(--border);
+      font-weight:600;
+      font-size:1.1rem;
+      color:var(--text);
+      transition:all 0.3s ease;
+      box-shadow:var(--shadow);
+    }
+    
+    .member-list li:hover{
+      transform:translateY(-2px);
+      box-shadow:var(--shadow-lg);
+    }
+    
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      padding:3rem 0;
+      background:linear-gradient(135deg,var(--emerald-50) 0%,#ffffff 100%);
+      color:var(--muted);
+    }
+    
+    /* Responsive */
+      @media (max-width:768px){
+        .container{padding:0 1rem;}
+        h1{font-size:3.5rem;}
+        .tagline{font-size:1.5rem;}
+        .nav{height:70px;flex-wrap:wrap;}
+        .navlinks{gap:1rem;flex-wrap:wrap;}
+        .hero{padding:3rem 0;}
+        section{padding:3rem 0;}
+        .brand-text{font-size:1.25rem;}
+      }    /* Utility classes */
+    .muted{color:var(--muted);}
+    .text-center{text-align:center;}
+    .mb-4{margin-bottom:2rem;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+    
+    /* Animations */
+    @keyframes fadeInUp{
+      from{opacity:0;transform:translateY(30px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+    
+    .fade-in{animation:fadeInUp 0.8s ease-out;}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">❤</div>
+        <div>
+          <div class="brand-text">Aklima Progressive</div>
+          <div class="brand-sub">Foundation</div>
+        </div>
+      </div>
+      <nav class="navlinks">
+        <a href="#mission">Mission</a>
+        <a href="#focus">Focus</a>
+        <a href="#programs">Programs</a>
+        <a href="#impact">Impact</a>
+        <a href="#governing-body">Governing Body</a>
+        <a href="#donate" class="btn primary">Donate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container row">
+        <div class="fade-in">
+          <span class="pill">🌍 Started in Bengal • Community‑led</span>
+          <h1>Aklima Progressive Foundation</h1>
+          <div class="tagline">Advancing opportunity with dignity</div>
+          <p class="lead">We partner with communities to expand access to education, healthcare, assistive mobility, and resilient infrastructure—starting in Magrahat, West Bengal.</p>
+          <p style="color:var(--muted);font-weight:500;margin-top:1.5rem;"><strong>Co-founded by Tazneem Alam and Dr. Monjur Alam</strong></p>
+        </div>
+        <div class="hero-card fade-in">
+          <img src="indp.jpg" alt="Independence Day Initiative - Education for All" class="hero-image" />
+          <div class="caption">Education for All</div>
+          <div style="display:flex;gap:12px;align-items:center;justify-content:center;">
+            <div style="color:var(--emerald-700);font-size:1.5rem;">❤</div>
+            <div style="text-align:left;">
+              <div style="font-weight:700;font-size:1rem;margin-bottom:0.25rem;">Independence Day Initiative</div>
+              <div class="muted" style="font-size:0.875rem;">Assistive mobility for 8–10 persons with disabilities</div>
+              <div style="margin-top:0.75rem;font-weight:700;font-size:0.95rem;color:var(--emerald-700);">350 school bags distributed</div>
+              <div class="muted" style="font-size:0.875rem;">6 Tri-cycles for physically challenged distributed</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mission">
+      <div class="container row">
+        <div>
+          <h2>Our Mission</h2>
+          <p class="muted" style="font-size:1.125rem;">Our mission is "Education for All." We work to remove practical barriers that keep families from thriving—school fees, lack of assistive devices, unsafe roads, and preventable illness. We fund local solutions, measure outcomes, and report transparently so every rupee creates meaningful change.</p>
+        </div>
+        <div class="card" style="background:linear-gradient(135deg,var(--emerald-50) 0%,var(--card) 100%);">
+          <h3 style="margin-bottom:1rem;">Where we work</h3>
+          <p class="muted">Initial focus in <strong>Magrahat (South 24 Parganas), West Bengal</strong>, with plans to expand through partnerships with local panchayats, schools, and health workers.</p>
+          <div style="color:var(--emerald-700);font-weight:600;margin-top:1rem;">📍 Magrahat • Diamond Harbour • Kakdwip</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="focus" style="background:linear-gradient(135deg,#ffffff 0%,var(--emerald-50) 100%);">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Focus Areas</h2>
+          <p class="muted" style="font-size:1.125rem;">Six priorities guide our grants and programs.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card focus-card">
+            <div class="icon">🎓</div>
+            <h3>Education Access</h3>
+            <p class="muted">Scholarships, exam fees, uniforms, and mentoring for students from low‑income families.</p>
+          </div>
+          <div class="card focus-card">
+            <div class="icon">♿</div>
+            <h3>Disability Support</h3>
+            <p class="muted">Wheelchairs, crutches, tricycles/bicycles, and assistive aids with after‑care.</p>
+          </div>
+          <div class="card focus-card">
+            <div class="icon">🚧</div>
+            <h3>Safe Infrastructure</h3>
+            <p class="muted">Community‑led road repair, lighting, and safe‑routes‑to‑school projects.</p>
+          </div>
+          <div class="card focus-card">
+            <div class="icon">🩺</div>
+            <h3>Primary Healthcare</h3>
+            <p class="muted">Screenings, health camps, and referral support for chronic conditions.</p>
+          </div>
+          <div class="card focus-card">
+            <div class="icon">👩‍👩‍👧</div>
+            <h3>Women & Livelihoods</h3>
+            <p class="muted">Skills, micro‑grants, and collectives that build resilient household income.</p>
+          </div>
+          <div class="card focus-card">
+            <div class="icon">🌱</div>
+            <h3>Climate Resilience</h3>
+            <p class="muted">Flood‑safe infrastructure and awareness in vulnerable blocks.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="programs">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Current Programs</h2>
+          <p class="muted" style="font-size:1.125rem;">Practical, high‑impact initiatives you can support today.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card program">
+            <div class="banner"></div>
+            <div style="text-transform:uppercase;font-size:0.75rem;color:var(--emerald-700);font-weight:700;margin-bottom:0.5rem;">Education</div>
+            <h3>Magrahat Scholars</h3>
+            <p class="muted">Sponsor students through board exams with fees, books, and mentoring.</p>
+            <a href="#donate" class="btn" style="margin-top:1rem;">Sponsor a student →</a>
+          </div>
+          <div class="card program">
+            <div class="banner"></div>
+            <div style="text-transform:uppercase;font-size:0.75rem;color:var(--emerald-700);font-weight:700;margin-bottom:0.5rem;">Disability</div>
+            <h3>Assistive Mobility</h3>
+            <p class="muted">Provide mobility devices across blocks with local follow‑up support.</p>
+            <a href="#donate" class="btn" style="margin-top:1rem;">Fund a device →</a>
+          </div>
+          <div class="card program">
+            <div class="banner"></div>
+            <div style="text-transform:uppercase;font-size:0.75rem;color:var(--emerald-700);font-weight:700;margin-bottom:0.5rem;">Infrastructure</div>
+            <h3>Safe Roads</h3>
+            <p class="muted">Repair high‑risk stretches using community materials & labour.</p>
+            <a href="#donate" class="btn" style="margin-top:1rem;">Back a stretch →</a>
+          </div>
+          <div class="card program">
+            <div class="banner"></div>
+            <div style="text-transform:uppercase;font-size:0.75rem;color:var(--emerald-700);font-weight:700;margin-bottom:0.5rem;">Health</div>
+            <h3>Community Health Camps</h3>
+            <p class="muted">Quarterly screenings for BP, diabetes, anaemia with referral pathways.</p>
+            <a href="#donate" class="btn" style="margin-top:1rem;">Enable a camp →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact" style="background:linear-gradient(135deg,var(--emerald-50) 0%,#f0fdf4 100%);">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Impact at a Glance</h2>
+          <p class="muted" style="font-size:1.125rem;">Our achievements in supporting the community.</p>
+        </div>
+        <div class="grid-4">
+          <div class="stat">
+            <div class="val">350</div>
+            <div class="desc">School bags distributed</div>
+          </div>
+          <div class="stat">
+            <div class="val">6</div>
+            <div class="desc">Tri-cycles for physically challenged distributed</div>
+          </div>
+          <div class="stat">
+            <div class="val">2–3 km</div>
+            <div class="desc">Priority roads to repair</div>
+          </div>
+          <div class="stat">
+            <div class="val">10</div>
+            <div class="desc">Students planned for 2026</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="governing-body" class="governing-body">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Governing Body</h2>
+          <p class="muted" style="font-size:1.125rem;">Leadership committed to transparency and community impact.</p>
+        </div>
+        <ul class="member-list">
+          <li>Inspector Abdus Samad Ansari</li>
+          <li>Tazneem Alam</li>
+          <li>Dr. Monjur Alam</li>
+          <li>Abhijnan Chakraborty</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="donate">
+      <div class="container">
+        <div class="text-center mb-4">
+          <h2>Support Our Mission</h2>
+          <p class="muted" style="font-size:1.125rem;">Every contribution makes a direct impact on our community.</p>
+        </div>
+        <div class="row">
+          <div class="card">
+            <h3>How to Donate</h3>
+            <p class="muted">For now, donations are processed offline while registration completes. Please contact us for bank details and receipt information.</p>
+            <div style="margin-top:2rem;">
+              <a href="mailto:donate@aklimafoundation.org" class="btn primary">Contact for Donation</a>
+            </div>
+          </div>
+          <div class="card" style="background:linear-gradient(135deg,var(--emerald-50) 0%,var(--card) 100%);">
+            <h3>What Your Gift Can Do</h3>
+            <ul style="color:var(--muted);padding-left:1.5rem;">
+              <li>₹3,000: Exam fees & books for one student</li>
+              <li>₹5,000–₹6,000: Assistive device for one person with disability</li>
+              <li>₹10,000: Materials for 50m of priority road repair</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;gap:2rem;align-items:center;justify-content:space-between;">
+        <div>
+          <div style="font-weight:600;margin-bottom:0.5rem;">Contact Information</div>
+          <div class="muted">Magrahat, South 24 Parganas, West Bengal, India</div>
+          <div class="muted">Email: hello@aklimafoundation.org</div>
+        </div>
+        <div>
+          <div style="font-weight:600;margin-bottom:0.5rem;">Quick Links</div>
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a href="#mission">Mission</a>
+            <a href="#programs">Programs</a>
+            <a href="#donate">Donate</a>
+            <a href="#governing-body">Governing Body</a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:2rem;padding-top:2rem;border-top:1px solid var(--border);text-align:center;">
+        <div class="muted">© <span id="year"></span> Aklima Progressive Foundation. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    // Smooth scroll for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+    
+    // Add fade-in animation on scroll
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+    
+    document.querySelectorAll('.card, .stat').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
