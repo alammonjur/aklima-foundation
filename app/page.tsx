@@ -28,13 +28,11 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-emerald-700 text-white rounded-2xl flex items-center justify-center text-xl font-bold shadow-lg">
-                ❤
-              </div>
-              <div>
-                <div className="text-xl font-black text-gray-900">Aklima Progressive</div>
-                <div className="text-xs tracking-wider text-gray-600 uppercase font-semibold">Foundation</div>
-              </div>
+              <img 
+                src="/media/logos/logo.jpg" 
+                alt="Aklima Progressive Foundation Logo"
+                className="h-12 w-auto object-contain"
+              />
             </div>
             <nav className="hidden lg:flex items-center gap-8">
               <a href="#mission" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Mission</a>
