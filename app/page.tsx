@@ -13,6 +13,7 @@ import {
 } from '@/lib/content'
 
 export default function HomePage() {
+  // Force rebuild - Dynamic hero photos with real images
   const foundationInfo = getFoundationInfo()
   const heroContent = getHeroContent()
   const focusAreas = getFocusAreas()
