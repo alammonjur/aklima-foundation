@@ -24,7 +24,7 @@ export default function HomePage() {
 
   // Dynamic photo rotation (Gates Foundation style)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const heroImages = heroContent.heroCard?.images || [{
+  const heroImages = (heroContent.heroCard as any)?.images || [{
     src: heroContent.heroCard?.image || "/media/logos/logo.jpg",
     title: heroContent.heroCard?.title || "Aklima Foundation",
     subtitle: heroContent.heroCard?.subtitle || "Making Impact",
@@ -178,7 +178,7 @@ export default function HomePage() {
 
                   {/* Photo indicators (Gates style) */}
                   <div className="absolute bottom-4 left-8 flex gap-2">
-                    {heroImages.map((_, index) => (
+                    {heroImages.map((_: any, index: number) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}

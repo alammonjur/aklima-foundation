@@ -40,10 +40,17 @@ export interface Hero {
     link: string
   }
   heroCard: {
-    image: string
-    title: string
-    subtitle: string
-    description: string
+    image?: string
+    images?: Array<{
+      src: string
+      alt: string
+      title: string
+      subtitle: string
+      description: string
+    }>
+    title?: string
+    subtitle?: string
+    description?: string
     stats: string[]
   }
 }
