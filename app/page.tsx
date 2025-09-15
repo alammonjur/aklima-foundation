@@ -58,28 +58,32 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-full text-emerald-700 font-semibold text-sm shadow-sm mb-6">
-                  {heroContent.badge}
-                </div>
-                
+                {heroContent.badge && (
+                  <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-full text-emerald-700 font-semibold text-sm shadow-sm mb-6">
+                    {heroContent.badge}
+                  </div>
+                )}
+
                 {/* Gates Foundation Style Bold Statement */}
                 <div className="text-2xl lg:text-3xl font-black text-emerald-700 mb-4 tracking-wide">
                   BUILDING DIGNITY, CREATING OPPORTUNITY
                 </div>
-                
-                <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-6 bg-gradient-to-br from-gray-900 to-emerald-700 bg-clip-text text-transparent">
-                  {heroContent.title}
-                </h1>
-                
+
+                {heroContent.title && (
+                  <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-6 bg-gradient-to-br from-gray-900 to-emerald-700 bg-clip-text text-transparent">
+                    {heroContent.title}
+                  </h1>
+                )}
+
                 {/* Gates Style Mission Statement */}
                 <div className="text-2xl lg:text-3xl font-semibold text-gray-600 mb-8 leading-tight border-l-4 border-emerald-600 pl-6">
                   Our mission is to create communities where every person has access to education, healthcare, and the tools to build a dignified life.
                 </div>
-                
+
                 <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mb-6">
                   {heroContent.description}
                 </p>
-                
+
                 {/* Impact Numbers - Gates Style */}
                 <div className="grid grid-cols-3 gap-8 mt-8 p-6 bg-white/80 rounded-2xl shadow-lg border border-emerald-100">
                   <div className="text-center">
@@ -95,7 +99,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold text-gray-600">Founded</div>
                   </div>
                 </div>
-                
+
                 <p className="text-gray-600 font-medium mt-6">
                   <strong>{heroContent.founders}</strong>
                 </p>
@@ -328,7 +332,7 @@ export default function HomePage() {
               <h2 className="text-4xl lg:text-5xl font-bold mb-6">Foundation Facts</h2>
               <p className="text-xl text-emerald-100">Building impact in West Bengal since 2024</p>
             </div>
-            
+
             <div className="grid md:grid-cols-3 gap-12 mb-16">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -340,7 +344,7 @@ export default function HomePage() {
                 <div className="text-xl font-semibold text-emerald-100 mb-2">Students Supported</div>
                 <div className="text-emerald-200">School bags and educational supplies distributed</div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -351,7 +355,7 @@ export default function HomePage() {
                 <div className="text-xl font-semibold text-emerald-100 mb-2">Mobility Devices</div>
                 <div className="text-emerald-200">Tricycles provided for independent mobility</div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -371,7 +375,7 @@ export default function HomePage() {
                   <div className="text-emerald-300 font-semibold mb-4">STORIES OF IMPACT</div>
                   <h3 className="text-3xl font-bold mb-6">From School Bags to Dreams: How Education Changes Everything</h3>
                   <p className="text-emerald-100 text-lg leading-relaxed mb-6">
-                    "My daughter can now attend school with dignity and pride," says Ruma Begum from Magrahat Village. 
+                    "My daughter can now attend school with dignity and pride," says Ruma Begum from Magrahat Village.
                     The school bag she received wasn't just supplies—it was hope, opportunity, and a pathway to a better future.
                   </p>
                   <div className="text-emerald-300 font-semibold">
