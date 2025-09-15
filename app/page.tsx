@@ -83,7 +83,7 @@ export default function HomePage() {
                 {/* Impact Numbers - Gates Style */}
                 <div className="grid grid-cols-3 gap-8 mt-8 p-6 bg-white/80 rounded-2xl shadow-lg border border-emerald-100">
                   <div className="text-center">
-                    <div className="text-3xl font-black text-emerald-700">350</div>
+                    <div className="text-3xl font-black text-emerald-700">400</div>
                     <div className="text-sm font-semibold text-gray-600">School Bags Distributed</div>
                   </div>
                   <div className="text-center">
@@ -91,7 +91,7 @@ export default function HomePage() {
                     <div className="text-sm font-semibold text-gray-600">Mobility Devices</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-black text-emerald-700">2024</div>
+                    <div className="text-3xl font-black text-emerald-700">2025</div>
                     <div className="text-sm font-semibold text-gray-600">Founded</div>
                   </div>
                 </div>
@@ -183,11 +183,11 @@ export default function HomePage() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Independence Day of Impact</h3>
                 <p className="text-gray-600 mb-4">
                   Celebrating freedom by creating opportunities. Watch our Independence Day initiative that
-                  distributed 350 school bags and 6 tricycles, transforming lives in our community.
+                  distributed 400 school bags and 6 tricycles, transforming lives in our community.
                 </p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
                   <span>📅 August 15, 2024</span>
-                  <span>🎒 350 School Bags</span>
+                  <span>🎒 400 School Bags</span>
                   <span>🚲 6 Tricycles</span>
                 </div>
               </motion.div>
@@ -336,7 +336,7 @@ export default function HomePage() {
                 transition={{ duration: 0.6 }}
                 className="text-center"
               >
-                <div className="text-6xl font-black text-emerald-300 mb-4">350+</div>
+                <div className="text-6xl font-black text-emerald-300 mb-4">400+</div>
                 <div className="text-xl font-semibold text-emerald-100 mb-2">Students Supported</div>
                 <div className="text-emerald-200">School bags and educational supplies distributed</div>
               </motion.div>
