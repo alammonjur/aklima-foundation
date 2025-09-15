@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  getHeroContent, 
-  getFocusAreas, 
-  getPrograms, 
+import {
+  getHeroContent,
+  getFocusAreas,
+  getPrograms,
   getImpactStats,
   getGoverningBody,
   getDonationInfo,
@@ -26,12 +26,12 @@ export default function HomePage() {
       {/* Header */}
       <header className="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-24">
             <div className="flex items-center gap-4">
-              <img 
-                src="/media/logos/logo.jpg" 
+              <img
+                src="/media/logos/logo.jpg"
                 alt="Aklima Progressive Foundation Logo"
-                className="h-12 w-auto object-contain"
+                className="h-16 w-auto object-contain hover:scale-105 transition-transform"
               />
             </div>
             <nav className="hidden lg:flex items-center gap-8">
@@ -51,7 +51,7 @@ export default function HomePage() {
         <section className="py-20 bg-gradient-to-br from-white via-emerald-50 to-green-50">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-16 items-center">
-              <motion.div 
+              <motion.div
                 className="lg:col-span-3"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -74,15 +74,15 @@ export default function HomePage() {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="lg:col-span-2"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <div className="bg-gradient-to-br from-white to-emerald-50 rounded-3xl p-8 text-center shadow-xl border border-emerald-100">
-                  <img 
-                    src={heroContent.heroCard.image} 
+                  <img
+                    src={heroContent.heroCard.image}
                     alt={heroContent.heroCard.title}
                     className="w-full h-72 object-cover rounded-2xl shadow-lg mb-6 hover:scale-105 transition-transform"
                   />
@@ -177,8 +177,8 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{program.title}</h3>
                   <p className="text-gray-600 mb-6">{program.description}</p>
-                  <a 
-                    href={program.link} 
+                  <a
+                    href={program.link}
                     className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-4 rounded-xl border border-gray-200 transition-all hover:shadow-md hover:-translate-y-0.5"
                   >
                     {program.buttonText}
@@ -252,7 +252,7 @@ export default function HomePage() {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.howToDonate.title}</h3>
                 <p className="text-gray-600 mb-8">{donationInfo.howToDonate.description}</p>
-                <a 
+                <a
                   href={`mailto:${donationInfo.howToDonate.email}`}
                   className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 >
