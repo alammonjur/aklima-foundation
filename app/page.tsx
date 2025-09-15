@@ -35,12 +35,13 @@ export default function HomePage() {
               />
             </div>
             <nav className="hidden lg:flex items-center gap-8">
-              <a href="#mission" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Mission</a>
-              <a href="#focus" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Focus</a>
+              <a href="#mission" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Our Mission</a>
+              <a href="#focus" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Our Work</a>
               <a href="#programs" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Programs</a>
               <a href="#impact" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Impact</a>
-              <a href="#governing-body" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Governing Body</a>
-              <a href="#donate" className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all shadow-emerald-200">Donate</a>
+              <a href="#stories" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">Stories</a>
+              <a href="#governing-body" className="text-gray-600 hover:text-emerald-700 font-medium transition-all hover:bg-emerald-50 px-4 py-2 rounded-lg">About</a>
+              <a href="#donate" className="bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-6 py-3 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all shadow-emerald-200">Support Us</a>
             </nav>
           </div>
         </div>
@@ -60,15 +61,41 @@ export default function HomePage() {
                 <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-full text-emerald-700 font-semibold text-sm shadow-sm mb-6">
                   {heroContent.badge}
                 </div>
+                
+                {/* Gates Foundation Style Bold Statement */}
+                <div className="text-2xl lg:text-3xl font-black text-emerald-700 mb-4 tracking-wide">
+                  BUILDING DIGNITY, CREATING OPPORTUNITY
+                </div>
+                
                 <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-6 bg-gradient-to-br from-gray-900 to-emerald-700 bg-clip-text text-transparent">
                   {heroContent.title}
                 </h1>
-                <div className="text-2xl lg:text-3xl font-semibold text-gray-600 mb-6 leading-tight">
-                  {heroContent.subtitle}
+                
+                {/* Gates Style Mission Statement */}
+                <div className="text-2xl lg:text-3xl font-semibold text-gray-600 mb-8 leading-tight border-l-4 border-emerald-600 pl-6">
+                  Our mission is to create communities where every person has access to education, healthcare, and the tools to build a dignified life.
                 </div>
-                <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mb-4">
+                
+                <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mb-6">
                   {heroContent.description}
                 </p>
+                
+                {/* Impact Numbers - Gates Style */}
+                <div className="grid grid-cols-3 gap-8 mt-8 p-6 bg-white/80 rounded-2xl shadow-lg border border-emerald-100">
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-emerald-700">350</div>
+                    <div className="text-sm font-semibold text-gray-600">School Bags Distributed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-emerald-700">6</div>
+                    <div className="text-sm font-semibold text-gray-600">Mobility Devices</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-black text-emerald-700">2024</div>
+                    <div className="text-sm font-semibold text-gray-600">Founded</div>
+                  </div>
+                </div>
+                
                 <p className="text-gray-600 font-medium mt-6">
                   <strong>{heroContent.founders}</strong>
                 </p>
@@ -112,7 +139,7 @@ export default function HomePage() {
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">See Our Impact</h2>
               <p className="text-xl text-gray-600">Real stories of transformation in our communities</p>
             </div>
-            
+
             <div className="grid lg:grid-cols-2 gap-12 mb-16">
               {/* Road Infrastructure Video */}
               <motion.div
@@ -130,7 +157,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Building Better Roads, Building Better Lives</h3>
                 <p className="text-gray-600 mb-4">
-                  See the dramatic transformation of road infrastructure in Magrahat. From impassable conditions 
+                  See the dramatic transformation of road infrastructure in Magrahat. From impassable conditions
                   to smooth pathways that connect communities and create opportunities.
                 </p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -155,7 +182,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">Independence Day of Impact</h3>
                 <p className="text-gray-600 mb-4">
-                  Celebrating freedom by creating opportunities. Watch our Independence Day initiative that 
+                  Celebrating freedom by creating opportunities. Watch our Independence Day initiative that
                   distributed 350 school bags and 6 tricycles, transforming lives in our community.
                 </p>
                 <div className="flex items-center gap-4 text-sm text-gray-500">
@@ -290,6 +317,75 @@ export default function HomePage() {
                   <div className="text-gray-600 font-medium">{stat.label}</div>
                 </motion.div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Foundation Facts Section - Gates Foundation Style */}
+        <section className="py-20 bg-gradient-to-br from-gray-900 to-emerald-900 text-white">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-6">Foundation Facts</h2>
+              <p className="text-xl text-emerald-100">Building impact in West Bengal since 2024</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-12 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="text-center"
+              >
+                <div className="text-6xl font-black text-emerald-300 mb-4">350+</div>
+                <div className="text-xl font-semibold text-emerald-100 mb-2">Students Supported</div>
+                <div className="text-emerald-200">School bags and educational supplies distributed</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+                className="text-center"
+              >
+                <div className="text-6xl font-black text-emerald-300 mb-4">6</div>
+                <div className="text-xl font-semibold text-emerald-100 mb-2">Mobility Devices</div>
+                <div className="text-emerald-200">Tricycles provided for independent mobility</div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="text-center"
+              >
+                <div className="text-6xl font-black text-emerald-300 mb-4">3</div>
+                <div className="text-xl font-semibold text-emerald-100 mb-2">Districts Served</div>
+                <div className="text-emerald-200">Magrahat, Diamond Harbour, Kakdwip</div>
+              </motion.div>
+            </div>
+
+            {/* Story Feature - Gates Style */}
+            <div className="bg-gradient-to-r from-emerald-800/50 to-green-800/50 rounded-3xl p-12 border border-emerald-700">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <div className="text-emerald-300 font-semibold mb-4">STORIES OF IMPACT</div>
+                  <h3 className="text-3xl font-bold mb-6">From School Bags to Dreams: How Education Changes Everything</h3>
+                  <p className="text-emerald-100 text-lg leading-relaxed mb-6">
+                    "My daughter can now attend school with dignity and pride," says Ruma Begum from Magrahat Village. 
+                    The school bag she received wasn't just supplies—it was hope, opportunity, and a pathway to a better future.
+                  </p>
+                  <div className="text-emerald-300 font-semibold">
+                    Independence Day Initiative • August 15, 2024
+                  </div>
+                </div>
+                <div className="aspect-video bg-gradient-to-br from-emerald-600/20 to-green-600/20 rounded-2xl flex items-center justify-center border border-emerald-600">
+                  <div className="text-center">
+                    <div className="text-4xl text-emerald-300 mb-4">🎒</div>
+                    <div className="text-emerald-200 font-semibold">Beneficiary Story Video</div>
+                    <div className="text-sm text-emerald-300">Coming Soon</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
