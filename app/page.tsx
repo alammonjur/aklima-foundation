@@ -1,7 +1,7 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
+import React, { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import {
   getHeroContent,
   getFocusAreas,
@@ -20,6 +20,22 @@ export default function HomePage() {
   const impactStats = getImpactStats()
   const governingBody = getGoverningBody()
   const donationInfo = getDonationInfo()
+
+  // Dynamic photo rotation (Gates Foundation style)
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const heroImages = heroContent.heroCard.images || [{
+    src: heroContent.heroCard.image,
+    title: heroContent.heroCard.title,
+    subtitle: heroContent.heroCard.subtitle,
+    description: heroContent.heroCard.description
+  }]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length)
+    }, 5000) // Change image every 5 seconds
+    return () => clearInterval(interval)
+  }, [heroImages.length])
 
   return (
     <div className="min-h-screen">
@@ -111,24 +127,64 @@ export default function HomePage() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="bg-gradient-to-br from-white to-emerald-50 rounded-3xl p-8 text-center shadow-xl border border-emerald-100">
-                  <img
-                    src={heroContent.heroCard.image}
-                    alt={heroContent.heroCard.title}
-                    className="w-full h-72 object-cover rounded-2xl shadow-lg mb-6 hover:scale-105 transition-transform"
-                  />
-                  <div className="text-xl font-bold text-emerald-700 mb-4">{heroContent.heroCard.title}</div>
-                  <div className="flex items-center justify-center gap-3 mb-4">
-                    <div className="text-2xl text-emerald-700">❤</div>
-                    <div className="text-left">
-                      <div className="font-bold text-gray-900 mb-1">{heroContent.heroCard.subtitle}</div>
-                      <div className="text-gray-600 text-sm mb-3">{heroContent.heroCard.description}</div>
-                      {heroContent.heroCard.stats.map((stat, index) => (
-                        <div key={index} className={`${index === 0 ? 'font-bold text-emerald-700' : 'text-gray-600'} text-sm`}>
-                          {stat}
+                {/* Gates Foundation Style Hero Image with Dynamic Rotation */}
+                <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={currentImageIndex}
+                      src={heroImages[currentImageIndex].src}
+                      alt={heroImages[currentImageIndex].alt || "Community impact and transformation"}
+                      className="w-full h-96 lg:h-[500px] object-cover"
+                      initial={{ opacity: 0, scale: 1.1 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.9 }}
+                      transition={{ duration: 0.8 }}
+                    />
+                  </AnimatePresence>
+
+                  {/* Gates-style overlay with dynamic content */}
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-8">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentImageIndex}
+                        className="text-white"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.6 }}
+                      >
+                        <div className="text-2xl font-bold mb-2">{heroImages[currentImageIndex].title}</div>
+                        <div className="text-emerald-200 font-semibold mb-3">{heroImages[currentImageIndex].subtitle}</div>
+                        <div className="text-sm text-gray-200 mb-4">{heroImages[currentImageIndex].description}</div>
+
+                        {/* Impact stats overlay */}
+                        <div className="flex gap-6 text-sm">
+                          {heroContent.heroCard.stats.map((stat, index) => (
+                            <div key={index} className="text-emerald-300 font-semibold">
+                              {stat}
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </motion.div>
+                    </AnimatePresence>
+                  </div>
+
+                  {/* Gates-style corner accent */}
+                  <div className="absolute top-4 right-4 bg-emerald-600 text-white px-3 py-2 rounded-lg text-sm font-semibold shadow-lg">
+                    Live Impact
+                  </div>
+
+                  {/* Photo indicators (Gates style) */}
+                  <div className="absolute bottom-4 left-8 flex gap-2">
+                    {heroImages.map((_, index) => (
+                      <button
+                        key={index}
+                        onClick={() => setCurrentImageIndex(index)}
+                        className={`w-2 h-2 rounded-full transition-all ${
+                          index === currentImageIndex ? 'bg-emerald-400' : 'bg-white/50'
+                        }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </motion.div>
