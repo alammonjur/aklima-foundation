@@ -105,6 +105,87 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Video Showcase Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-6xl mx-auto px-4 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">See Our Impact</h2>
+              <p className="text-xl text-gray-600">Real stories of transformation in our communities</p>
+            </div>
+            
+            <div className="grid lg:grid-cols-2 gap-12 mb-16">
+              {/* Road Infrastructure Video */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100"
+              >
+                <div className="aspect-video bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-2xl mb-6 flex items-center justify-center border border-emerald-200">
+                  <div className="text-center">
+                    <div className="text-4xl text-emerald-600 mb-4">🛣️</div>
+                    <div className="text-emerald-700 font-semibold mb-2">Road Infrastructure Video</div>
+                    <div className="text-sm text-emerald-600">Upload: road-infrastructure-impact.mp4</div>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Building Better Roads, Building Better Lives</h3>
+                <p className="text-gray-600 mb-4">
+                  See the dramatic transformation of road infrastructure in Magrahat. From impassable conditions 
+                  to smooth pathways that connect communities and create opportunities.
+                </p>
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <span>📍 Magrahat, West Bengal</span>
+                  <span>🏗️ Infrastructure Impact</span>
+                </div>
+              </motion.div>
+
+              {/* Independence Day Video */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100"
+              >
+                <div className="aspect-video bg-gradient-to-br from-blue-100 to-green-50 rounded-2xl mb-6 flex items-center justify-center border border-blue-200">
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">🇮🇳</div>
+                    <div className="text-blue-700 font-semibold mb-2">Independence Day Impact</div>
+                    <div className="text-sm text-blue-600">Upload: independence-day-impact-2024.mp4</div>
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">Independence Day of Impact</h3>
+                <p className="text-gray-600 mb-4">
+                  Celebrating freedom by creating opportunities. Watch our Independence Day initiative that 
+                  distributed 350 school bags and 6 tricycles, transforming lives in our community.
+                </p>
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <span>📅 August 15, 2024</span>
+                  <span>🎒 350 School Bags</span>
+                  <span>🚲 6 Tricycles</span>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Quick Upload Guide */}
+            <div className="bg-emerald-50 rounded-2xl p-8 border border-emerald-200">
+              <h3 className="text-xl font-bold text-emerald-900 mb-4">📹 Ready to Upload Your Videos?</h3>
+              <div className="grid md:grid-cols-2 gap-6 text-emerald-700">
+                <div>
+                  <h4 className="font-semibold mb-2">Road Infrastructure Video:</h4>
+                  <p className="text-sm">Upload to: <code className="bg-white px-2 py-1 rounded">/media/videos/road-infrastructure/</code></p>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-2">Independence Day Video:</h4>
+                  <p className="text-sm">Upload to: <code className="bg-white px-2 py-1 rounded">/media/videos/independence-day-2025/</code></p>
+                </div>
+              </div>
+              <div className="mt-4 text-sm text-emerald-600">
+                💡 <strong>Tip:</strong> Videos will automatically appear here once uploaded and the website is updated!
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mission Section */}
         <section id="mission" className="py-20">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
