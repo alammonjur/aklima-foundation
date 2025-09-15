@@ -23,11 +23,12 @@ export default function HomePage() {
 
   // Dynamic photo rotation (Gates Foundation style)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-  const heroImages = heroContent.heroCard.images || [{
-    src: heroContent.heroCard.image,
-    title: heroContent.heroCard.title,
-    subtitle: heroContent.heroCard.subtitle,
-    description: heroContent.heroCard.description
+  const heroImages = heroContent.heroCard?.images || [{
+    src: heroContent.heroCard?.image || "/media/logos/logo.jpg",
+    title: heroContent.heroCard?.title || "Aklima Foundation",
+    subtitle: heroContent.heroCard?.subtitle || "Making Impact",
+    description: heroContent.heroCard?.description || "Community-driven initiatives",
+    alt: "Community impact and transformation"
   }]
 
   useEffect(() => {
@@ -159,7 +160,7 @@ export default function HomePage() {
 
                         {/* Impact stats overlay */}
                         <div className="flex gap-6 text-sm">
-                          {heroContent.heroCard.stats.map((stat, index) => (
+                          {(heroContent.heroCard?.stats || ["400 school bags distributed", "6 Tricycles for mobility support"]).map((stat, index) => (
                             <div key={index} className="text-emerald-300 font-semibold">
                               {stat}
                             </div>

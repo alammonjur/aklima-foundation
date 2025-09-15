@@ -39,25 +39,25 @@
     "heroCard": {
       "images": [
         {
-          "src": "/images/indp.jpg",
-          "alt": "Independence Day Initiative",
-          "title": "Independence Day Initiative",
-          "subtitle": "Building Better Communities",
-          "description": "Community-driven impact initiatives"
-        },
-        {
-          "src": "/media/logos/logo.jpg",
-          "alt": "Education Support Program",
-          "title": "Education for All",
+          "src": "/images/bag.jpg",
+          "alt": "School Bags Distribution Initiative",
+          "title": "Education Support Program",
           "subtitle": "Empowering Through Learning",
-          "description": "Breaking barriers to education access"
+          "description": "400 school bags distributed to support education"
         },
         {
-          "src": "/images/indp.jpg",
+          "src": "/images/triCycle1.jpg",
           "alt": "Mobility Support Initiative",
           "title": "Mobility & Independence",
           "subtitle": "Moving Forward Together",
-          "description": "Assistive devices changing lives"
+          "description": "Tricycles providing independence and mobility"
+        },
+        {
+          "src": "/images/triCycle2.jpg",
+          "alt": "Community Impact Program",
+          "title": "Building Better Communities",
+          "subtitle": "Transforming Lives",
+          "description": "Assistive devices changing lives daily"
         }
       ],
       "stats": [
