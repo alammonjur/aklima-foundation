@@ -67,9 +67,9 @@ export default function HomePage() {
 
       <main>
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-white via-emerald-50 to-green-50">
+        <section className="py-16 bg-gradient-to-br from-white via-emerald-50 to-green-50">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
-            <div className="grid lg:grid-cols-5 gap-16 items-center">
+            <div className="grid lg:grid-cols-5 gap-12 items-start">
               <motion.div
                 className="lg:col-span-3"
                 initial={{ opacity: 0, y: 30 }}
@@ -77,48 +77,48 @@ export default function HomePage() {
                 transition={{ duration: 0.8 }}
               >
                 {heroContent.badge && (
-                  <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-full text-emerald-700 font-semibold text-sm shadow-sm mb-6">
+                  <div className="inline-flex items-center gap-2 bg-emerald-100 border border-emerald-200 px-4 py-2 rounded-full text-emerald-700 font-semibold text-sm shadow-sm mb-4">
                     {heroContent.badge}
                   </div>
                 )}
 
                 {/* Gates Foundation Style Bold Statement */}
-                <div className="text-xl lg:text-2xl font-black text-emerald-700 mb-4 tracking-wide">
+                <div className="text-xl lg:text-2xl font-black text-emerald-700 mb-3 tracking-wide">
                   BUILDING DIGNITY, CREATING OPPORTUNITY
                 </div>
 
                 {heroContent.title && (
-                  <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-6 bg-gradient-to-br from-gray-900 to-emerald-700 bg-clip-text text-transparent">
+                  <h1 className="text-6xl lg:text-7xl font-black leading-tight mb-4 bg-gradient-to-br from-gray-900 to-emerald-700 bg-clip-text text-transparent">
                     {heroContent.title}
                   </h1>
                 )}
 
                 {/* Gates Style Mission Statement */}
-                <div className="text-lg lg:text-xl font-semibold text-gray-600 mb-8 leading-tight border-l-4 border-emerald-600 pl-6">
+                <div className="text-lg lg:text-xl font-semibold text-gray-600 mb-4 leading-tight border-l-4 border-emerald-600 pl-6">
                   Our mission is to create communities where every person has access to education, healthcare, and the tools to build a dignified life.
                 </div>
 
-                <p className="text-xl text-gray-600 max-w-2xl leading-relaxed mb-6">
+                <p className="text-lg text-gray-600 max-w-2xl leading-relaxed mb-6">
                   {heroContent.description}
                 </p>
 
                 {/* Impact Numbers - Gates Style */}
-                <div className="grid grid-cols-3 gap-8 mt-8 p-6 bg-white/80 rounded-2xl shadow-lg border border-emerald-100">
+                <div className="grid grid-cols-3 gap-6 p-5 bg-white/80 rounded-2xl shadow-lg border border-emerald-100">
                   <div className="text-center">
-                    <div className="text-3xl font-black text-emerald-700">400</div>
-                    <div className="text-sm font-semibold text-gray-600">School Bags Distributed</div>
+                    <div className="text-2xl lg:text-3xl font-black text-emerald-700">400</div>
+                    <div className="text-xs lg:text-sm font-semibold text-gray-600">School Bags Distributed</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-black text-emerald-700">6</div>
-                    <div className="text-sm font-semibold text-gray-600">Mobility Devices</div>
+                    <div className="text-2xl lg:text-3xl font-black text-emerald-700">6</div>
+                    <div className="text-xs lg:text-sm font-semibold text-gray-600">Mobility Devices</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-black text-emerald-700">2025</div>
-                    <div className="text-sm font-semibold text-gray-600">Founded</div>
+                    <div className="text-2xl lg:text-3xl font-black text-emerald-700">2km</div>
+                    <div className="text-xs lg:text-sm font-semibold text-gray-600">Road Repaire</div>
                   </div>
                 </div>
 
-                <p className="text-gray-600 font-medium mt-6">
+                <p className="text-gray-600 font-medium mt-4">
                   <strong>{heroContent.founders}</strong>
                 </p>
               </motion.div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                       key={currentImageIndex}
                       src={heroImages[currentImageIndex].src}
                       alt={heroImages[currentImageIndex].alt || "Community impact and transformation"}
-                      className="w-full h-96 lg:h-[500px] object-cover"
+                      className="w-full h-80 lg:h-[450px] object-cover"
                       initial={{ opacity: 0, scale: 1.1 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.9 }}
