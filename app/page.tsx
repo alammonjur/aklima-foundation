@@ -83,7 +83,7 @@ export default function HomePage() {
                 )}
 
                 {/* Gates Foundation Style Bold Statement */}
-                <div className="text-2xl lg:text-3xl font-black text-emerald-700 mb-4 tracking-wide">
+                <div className="text-xl lg:text-2xl font-black text-emerald-700 mb-4 tracking-wide">
                   BUILDING DIGNITY, CREATING OPPORTUNITY
                 </div>
 
@@ -94,7 +94,7 @@ export default function HomePage() {
                 )}
 
                 {/* Gates Style Mission Statement */}
-                <div className="text-2xl lg:text-3xl font-semibold text-gray-600 mb-8 leading-tight border-l-4 border-emerald-600 pl-6">
+                <div className="text-lg lg:text-xl font-semibold text-gray-600 mb-8 leading-tight border-l-4 border-emerald-600 pl-6">
                   Our mission is to create communities where every person has access to education, healthcare, and the tools to build a dignified life.
                 </div>
 
