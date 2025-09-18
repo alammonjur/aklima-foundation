@@ -170,10 +170,10 @@
   ],
   "donation": {
     "title": "Support Our Mission",
-    "description": "Every contribution makes a direct impact on our community.",
+    "description": "",
     "howToDonate": {
       "title": "How to Donate",
-      "description": "Our efforts are experimental in nature. We aim to self-fund our initiatives for the next 3-5 years to thoroughly assess their impact and effectiveness. If our programs prove successful and demonstrate the need for expanded work, we will then reach out to individuals and organizations for additional funding. For now, your suggestions and comments would be greatly appreciated as we refine our approach.",
+      "description": "This is an experimental initiative. We are self-funding for 3-5 years to rigorously evaluate impact and effectiveness. Should our programs demonstrate success and warrant expansion, we will approach individuals and organizations for funding. Currently, we welcome your feedback and suggestions as we refine our methodology.",
       "buttonText": "",
       "email": "info@aklimafoundation.org"
     }
