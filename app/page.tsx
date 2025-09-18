@@ -482,37 +482,23 @@ export default function HomePage() {
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">{donationInfo.title}</h2>
               <p className="text-xl text-gray-600">{donationInfo.description}</p>
             </div>
-            <div className="grid lg:grid-cols-2 gap-16">
+            <div className="max-w-2xl mx-auto">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
                 className="bg-white rounded-3xl p-8 shadow-lg border border-gray-100"
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.howToDonate.title}</h3>
                 <p className="text-gray-600 mb-8">{donationInfo.howToDonate.description}</p>
-                <a
-                  href={`mailto:${donationInfo.howToDonate.email}`}
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
-                >
-                  {donationInfo.howToDonate.buttonText}
-                </a>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-8 shadow-lg border border-emerald-100"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.donationImpact.title}</h3>
-                <ul className="space-y-3 text-gray-600">
-                  {donationInfo.donationImpact.amounts.map((amount, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-emerald-600 mr-2">•</span>
-                      {amount}
-                    </li>
-                  ))}
-                </ul>
+                {donationInfo.howToDonate.buttonText && (
+                  <a
+                    href={`mailto:${donationInfo.howToDonate.email}`}
+                    className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                  >
+                    {donationInfo.howToDonate.buttonText}
+                  </a>
+                )}
               </motion.div>
             </div>
           </div>

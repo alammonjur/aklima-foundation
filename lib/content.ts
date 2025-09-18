@@ -86,7 +86,7 @@ export interface Donation {
     buttonText: string
     email: string
   }
-  donationImpact: {
+  donationImpact?: {
     title: string
     amounts: string[]
   }

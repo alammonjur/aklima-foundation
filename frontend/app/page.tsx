@@ -2,10 +2,10 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
-import { 
-  getHeroContent, 
-  getFocusAreas, 
-  getPrograms, 
+import {
+  getHeroContent,
+  getFocusAreas,
+  getPrograms,
   getImpactStats,
   getGoverningBody,
   getDonationInfo,
@@ -53,7 +53,7 @@ export default function HomePage() {
         <section className="py-20 bg-gradient-to-br from-white via-emerald-50 to-green-50">
           <div className="max-w-6xl mx-auto px-4 lg:px-8">
             <div className="grid lg:grid-cols-5 gap-16 items-center">
-              <motion.div 
+              <motion.div
                 className="lg:col-span-3"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -76,15 +76,15 @@ export default function HomePage() {
                 </p>
               </motion.div>
 
-              <motion.div 
+              <motion.div
                 className="lg:col-span-2"
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <div className="bg-gradient-to-br from-white to-emerald-50 rounded-3xl p-8 text-center shadow-xl border border-emerald-100">
-                  <img 
-                    src={heroContent.heroCard.image} 
+                  <img
+                    src={heroContent.heroCard.image}
                     alt={heroContent.heroCard.title}
                     className="w-full h-72 object-cover rounded-2xl shadow-lg mb-6 hover:scale-105 transition-transform"
                   />
@@ -179,8 +179,8 @@ export default function HomePage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 mb-4">{program.title}</h3>
                   <p className="text-gray-600 mb-6">{program.description}</p>
-                  <a 
-                    href={program.link} 
+                  <a
+                    href={program.link}
                     className="inline-flex items-center justify-center w-full bg-white hover:bg-gray-50 text-gray-700 font-medium py-3 px-4 rounded-xl border border-gray-200 transition-all hover:shadow-md hover:-translate-y-0.5"
                   >
                     {program.buttonText}
@@ -254,29 +254,31 @@ export default function HomePage() {
               >
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.howToDonate.title}</h3>
                 <p className="text-gray-600 mb-8">{donationInfo.howToDonate.description}</p>
-                <a 
+                <a
                   href={`mailto:${donationInfo.howToDonate.email}`}
                   className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-600 to-emerald-700 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:-translate-y-0.5 transition-all"
                 >
                   {donationInfo.howToDonate.buttonText}
                 </a>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-8 shadow-lg border border-emerald-100"
-              >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.donationImpact.title}</h3>
-                <ul className="space-y-3 text-gray-600">
-                  {donationInfo.donationImpact.amounts.map((amount, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="text-emerald-600 mr-2">•</span>
-                      {amount}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
+              {donationInfo.donationImpact && (
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="bg-gradient-to-br from-emerald-50 to-white rounded-3xl p-8 shadow-lg border border-emerald-100"
+                >
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{donationInfo.donationImpact.title}</h3>
+                  <ul className="space-y-3 text-gray-600">
+                    {donationInfo.donationImpact.amounts.map((amount, index) => (
+                      <li key={index} className="flex items-start">
+                        <span className="text-emerald-600 mr-2">•</span>
+                        {amount}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
             </div>
           </div>
         </section>

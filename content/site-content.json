@@ -173,17 +173,9 @@
     "description": "Every contribution makes a direct impact on our community.",
     "howToDonate": {
       "title": "How to Donate",
-      "description": "For now, donations are processed offline while registration completes. Please contact us for bank details and receipt information.",
-      "buttonText": "Contact for Donation",
-      "email": "donate@aklimafoundation.org"
-    },
-    "donationImpact": {
-      "title": "What Your Gift Can Do",
-      "amounts": [
-        "₹3,000: Exam fees & books for one student",
-        "₹5,000–₹6,000: Assistive device for one person with disability",
-        "₹10,000: Materials for 50m of priority road repair"
-      ]
+      "description": "Our efforts are experimental in nature. We aim to self-fund our initiatives for the next 3-5 years to thoroughly assess their impact and effectiveness. If our programs prove successful and demonstrate the need for expanded work, we will then reach out to individuals and organizations for additional funding. For now, your suggestions and comments would be greatly appreciated as we refine our approach.",
+      "buttonText": "",
+      "email": "info@aklimafoundation.org"
     }
   }
 }
